@@ -40,3 +40,92 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+//Nav Links, Top Button & DOM is awesome
+const navBar = document.getElementsByTagName('a');
+navBar[0].textContent = "Services";
+navBar[1].textContent = "Product";
+navBar[2].textContent = "Vision";
+navBar[3].textContent = "Features";
+navBar[4].textContent = "About";
+navBar[5].textContent = "Contact";
+
+const ctaButton = document.getElementsByTagName("button");
+ctaButton.textContent = siteContent["cta"]["button"];
+
+const ctaTitle = document.getElementsByTagName("h1")[0];
+ctaTitle.textContent = siteContent["cta"]["h1"];
+
+//All h4s
+const featuresTitle = document.getElementsByTagName("h4")[0];
+featuresTitle.textContent = siteContent["main-content"]["features-h4"];
+const aboutTitle = document.getElementsByTagName("h4")[1];
+aboutTitle.textContent = siteContent["main-content"]["about-h4"];
+const servicesTitle = document.getElementsByTagName("h4")[2];
+servicesTitle.textContent = siteContent["main-content"]["services-h4"];
+const productTitle = document.getElementsByTagName("h4")[3];
+productTitle.textContent = siteContent["main-content"]["product-h4"];
+const visionTitle = document.getElementsByTagName ("h4")[4];
+visionTitle.textContent = siteContent["main-content"]["vision-h4"];
+
+//All p's
+const featuresPara = document.getElementsByTagName("p")[0];
+featuresPara.textContent = siteContent["main-content"]["features-content"];
+const aboutPara = document.getElementsByTagName("p")[1];
+aboutPara.textContent = siteContent["main-content"]["about-content"];
+const servicesPara = document.getElementsByTagName("p")[2];
+servicesPara.textContent = siteContent["main-content"]["services-content"];
+const productPara = document.getElementsByTagName("p")[3];
+productPara.textContent = siteContent["main-content"]["product-content"];
+const visionPara = document.getElementsByTagName ("p")[4];
+visionPara.textContent = siteContent["main-content"]["vision-content"];
+
+//Images
+const ctaImage = document.getElementById('cta-img');
+ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
+
+const middleImage = document.getElementById("middle-img");
+middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+//Contact & Footer
+
+const contactTitle = document.getElementsByTagName("h4")[5];
+contactTitle.textContent = siteContent["contact"]["contact-h4"];
+const addressPara = document.getElementsByTagName("p")[5];
+addressPara.textContent = siteContent["contact"]["address"];
+const phonePara = document.getElementsByTagName("p")[6];
+phonePara.textContent = siteContent["contact"]["phone"];
+const emailPara = document.getElementsByTagName("p")[7];
+emailPara.textContent = siteContent["contact"]["email"];
+
+const footerPara = document.getElementsByTagName("p")[8];
+footerPara.textContent = siteContent["footer"]["copyright"];
+
+
+//Use of append;prepend & change nav to green
+
+navBar[0].style.color = "green";
+navBar[1].style.color = "green";
+navBar[2].style.color = "green";
+navBar[3].style.color = "green";
+navBar[4].style.color = "green";
+navBar[5].style.color = "green";
+
+const blogLink = document.createElement("a");
+blogLink.textContent = "Blog";
+blogLink.href = "#";
+document.querySelector("nav").appendChild(blogLink);
+
+const photosLink = document.createElement('a');
+photosLink.textContent = "Photos";
+photosLink.href = "#";
+document.querySelector("nav").prepend(photosLink);
+
+
+
+
+
+
+
+
